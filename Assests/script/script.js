@@ -95,7 +95,7 @@ $(document).ready(function () {
     // API call for UV Index. Gets the lat/lon from current weather call
     //---------------
     const uvCall = (lon, lat) => {
-        let uvQueryURL = `https://api.openweathermap.org/data/2.5/uvi?lat=${lat}&lon=${lon}&units=imperial&appid=77cb488591d883bec900753d1136d81c`;
+        let uvQueryURL = `https://api.openweathermap.org/data/2.5/uvi?lat=${lat}&lon=${lon}&units=imperial&appid=ded6c76512a30faaaad251856fc87f95`;
 
         $.ajax({
             url: uvQueryURL,
@@ -120,7 +120,7 @@ $(document).ready(function () {
 
   
     const fiveDay = (lon, lat) => {
-        let fiveQueryURL = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=current,minutely,hourly,alerts&units=imperial&appid=77cb488591d883bec900753d1136d81c`;
+        let fiveQueryURL = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=current,minutely,hourly,alerts&units=imperial&appid=ded6c76512a30faaaad251856fc87f95`;
 
         $.ajax({
             url: fiveQueryURL,
@@ -148,7 +148,7 @@ $(document).ready(function () {
     const call = (btnCityName) => {
         let cityName = btnCityName || $('input').val();
         // Current weather conditions
-        let queryURL = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=imperial&appid=77cb488591d883bec900753d1136d81c`;
+        let queryURL = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=imperial&appid=ded6c76512a30faaaad251856fc87f95`;
         // ajax call
         $.ajax({
             url: queryURL,
