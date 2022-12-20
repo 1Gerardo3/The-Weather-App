@@ -118,9 +118,7 @@ $(document).ready(function () {
         });
     };
 
-    //---------------
-    // API call for five-day forecast. Gets the lat/lon from current weather call
-    //---------------
+  
     const fiveDay = (lon, lat) => {
         let fiveQueryURL = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=current,minutely,hourly,alerts&units=imperial&appid=77cb488591d883bec900753d1136d81c`;
 
@@ -147,10 +145,6 @@ $(document).ready(function () {
         });
     };
 
-    // --------------------------------
-    // ajax call to openweathermap API
-    //---------------------------------
-    // Called with input from search bar or search history button
     const call = (btnCityName) => {
         let cityName = btnCityName || $('input').val();
         // Current weather conditions
